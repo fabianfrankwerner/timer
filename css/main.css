@@ -1,8 +1,16 @@
-body {
+html, body {
     font-family: 'Space Mono', monospace;
     background: #000000;
-    margin: 25px;
+    height: 100%;
+    margin: 0;
 }
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
 .timer {
     display: inline-block;

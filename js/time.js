@@ -31,8 +31,17 @@ export default class Timer {
                 alert("“Our work is great; our time is short; the consequences of our labors are infinite.” — John Newton")
             }
         });
+
+        this.updateTitleInterval = setInterval(() => {
+            this.updateTitle();
+        }, 1000);
     }
 
+    updateTitle() {
+        const minutes = Math.floor(this.remainingSeconds / 60);
+        const seconds = this.remainingSeconds % 60;
+        document.title = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")} | Timer`;
+    }
 
     updateInterfaceTime() {
         const minutes = Math.floor(this.remainingSeconds / 60);
