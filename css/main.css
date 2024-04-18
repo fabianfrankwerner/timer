@@ -1,14 +1,14 @@
 body {
+    font-family: 'Space Mono', monospace;
     background: #000000;
     margin: 25px;
 }
 
 .timer {
-    font-family: sans-serif;
     display: inline-block;
     padding: 25px 50px;
     border-radius: 25px;
-    background: white;
+    background: #808080;
 }
 
 .timer__part {
@@ -22,14 +22,14 @@ body {
     margin-left: 25px;
     border-radius: 50%;
     border: none;
-    color: white;
-    background: #8208e6;
+    color: #ffffff;
+    background: #000000;
 }
 
 .timer__btn--start {
-    background: #00b84c;
+    background: #000000;
 }
 
 .timer__btn--stop {
-    background: #ff0256;
+    background: #404040;
 }

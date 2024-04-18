@@ -9,8 +9,10 @@ export default class Timer {
             reset: root.querySelector(".timer__btn--reset"),
         };
         
-        this.interval = null;
+        this.interval = 40;
         this.remainingSeconds = 90;
+
+        this.updateInterfaceControls();
 
         this.el.control.addEventListener("click", () => {
             //code
@@ -31,7 +33,15 @@ export default class Timer {
     }
 
     updateInterfaceControls() {
-        //code 23min
+        if (this.interval === null) {
+            this.el.control.innerHTML = `<span class="material-icons">play_arrow</span>`;
+            this.el.control.classList.add("timer__btn--start");
+            this.el.control.classList.remove("timer__btn--stop");
+        } else {
+            this.el.control.innerHTML = `<span class="material-icons">pause</span>`;
+            this.el.control.classList.add("timer__btn--stop");
+            this.el.control.classList.remove("timer__btn--start");
+        }
     }
 
     static getHTML() {
